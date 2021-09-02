@@ -313,8 +313,8 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
 
 "     let s:syntax_bg     = ['#32363E', '16']  " origin + 10
 "     let s:syntax_bg     = ['#282c34', '16']  " origin
-"     let s:syntax_bg     = ['#23272F', '16']  " origin - 5
-    let s:syntax_bg     = ['#1E222A', '16']  " origin - 10
+"     let s:syntax_bg     = ['#1E222A', '16']  " origin - 10
+    let s:syntax_bg     = ['#13171F', '16']  " origin - 21
     let s:syntax_gutter = ['#6D778D', '60']
     let s:syntax_cursor = ['#363C46', '16']
 
