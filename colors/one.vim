@@ -290,69 +290,135 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
 
   " Color definition --------------------------------------------------------{{{
 
+"   origin + 10
   let s:dark = 0
   if &background ==# 'dark'
     let s:dark = 1
-    let s:mono_1 = ['#B0B7C4', '145']
-    let s:mono_2 = ['#878E9C', '102']
-    let s:mono_3 = ['#616875', '59']
-    let s:mono_4 = ['#505768', '59']
+    let s:mono_1 = ['#B5BCC9', '145']
+    let s:mono_2 = ['#8C93A1', '102']
+    let s:mono_3 = ['#666D7A', '59']
+    let s:mono_4 = ['#555C6D', '59']
 
-    let s:hue_1  = ['#5BBBC7', '73'] " cyan
-    let s:hue_2  = ['#66B4F4', '75'] " blue
-    let s:hue_3  = ['#CB7DE2', '176'] " purple
-    let s:hue_4  = ['#9DC87E', '114'] " green
+    let s:hue_1  = ['#60C0CC', '73'] " cyan
+    let s:hue_2  = ['#6BB9F9', '75'] " blue
+    let s:hue_3  = ['#D082E7', '176'] " purple
+    let s:hue_4  = ['#A2CD83', '114'] " green
 
-    let s:hue_5   = ['#E5717A', '168'] " red 1
-    let s:hue_5_2 = ['#C3554B', '130'] " red 2
+    let s:hue_5   = ['#EA767F', '168'] " red 1
+    let s:hue_5_2 = ['#C85A50', '130'] " red 2
 
-    let s:hue_6   = ['#D69F6B', '173'] " orange 1
-    let s:hue_6_2 = ['#EAC580', '180'] " orange 2
+    let s:hue_6   = ['#DBA470', '173'] " orange 1
+    let s:hue_6_2 = ['#EFCA85', '180'] " orange 2
 
-    let s:syntax_bg     = ['#2D3139', '16']
-    let s:syntax_gutter = ['#687288', '60']
-    let s:syntax_cursor = ['#313741', '16']
+    let s:syntax_bg     = ['#32363E', '16']
+    let s:syntax_gutter = ['#6D778D', '60']
+    let s:syntax_cursor = ['#363C46', '16']
 
-    let s:syntax_accent = ['#579104', '69']
+    let s:syntax_accent = ['#5C96FF', '69']
 
-    let s:vertsplit    = ['#1D1F24', '233']
-    let s:special_grey = ['#40454D', '16']
-    let s:visual_grey  = ['#434957', '17']
-    let s:pmenu        = ['#383D46', '16']
+    let s:vertsplit    = ['#222429', '233']
+    let s:special_grey = ['#454A52', '16']
+    let s:visual_grey  = ['#484E5C', '17']
+    let s:pmenu        = ['#3D424B', '16']
   else
-    let s:mono_1 = ['#4E5058', '23']
-    let s:mono_2 = ['#6E717C', '60']
-    let s:mono_3 = ['#A5A6AC', '145']
-    let s:mono_4 = ['#C7C7C8', '250']
+    let s:mono_1 = ['#53555D', '23']
+    let s:mono_2 = ['#737681', '60']
+    let s:mono_3 = ['#AAABB1', '145']
+    let s:mono_4 = ['#CCCCCD', '250']
 
-    let s:hue_1  = ['#689C1', '31'] " cyan
-    let s:hue_2  = ['#457DF7', '33'] " blue
-    let s:hue_3  = ['#AB2BA9', '127'] " purple
-    let s:hue_4  = ['#55A654', '71'] " green
+    let s:hue_1  = ['#B8EC6', '31'] " cyan
+    let s:hue_2  = ['#4A82FC', '33'] " blue
+    let s:hue_3  = ['#B030AE', '127'] " purple
+    let s:hue_4  = ['#5AAB59', '71'] " green
 
-    let s:hue_5   = ['#E95B4E', '166'] " red 1
-    let s:hue_5_2 = ['#CF1748', '160'] " red 2
+    let s:hue_5   = ['#EE6053', '166'] " red 1
+    let s:hue_5_2 = ['#D41C4D', '160'] " red 2
 
-    let s:hue_6   = ['#9D6D06', '94'] " orange 1
-    let s:hue_6_2 = ['#C68906', '136'] " orange 2
+    let s:hue_6   = ['#A2720B', '94'] " orange 1
+    let s:hue_6_2 = ['#CB8E0B', '136'] " orange 2
 
-    let s:syntax_bg     = ['#FEFEFE', '255']
-    let s:syntax_gutter = ['#A3A3A3', '247']
-    let s:syntax_cursor = ['#F5F5F5', '254']
+    let s:syntax_bg     = ['#FFFFFF', '255']
+    let s:syntax_gutter = ['#A8A8A8', '247']
+    let s:syntax_cursor = ['#FAFAFA', '254']
 
-    let s:syntax_accent = ['#577504', '63']
-    let s:syntax_accent_2 = ['#588C3', '31']
+    let s:syntax_accent = ['#5C79FF', '63']
+    let s:syntax_accent_2 = ['#A8DC8', '31']
 
-    let s:vertsplit    = ['#ECEEE6', '188']
-    let s:special_grey = ['#D8D8D8', '251']
-    let s:visual_grey  = ['#D5D5D5', '251']
-    let s:pmenu        = ['#E4E4E4', '253']
+    let s:vertsplit    = ['#F1F3EB', '188']
+    let s:special_grey = ['#DDDDDD', '251']
+    let s:visual_grey  = ['#DADADA', '251']
+    let s:pmenu        = ['#E9E9E9', '253']
   endif
 
   let s:syntax_fg = s:mono_1
   let s:syntax_fold_bg = s:mono_3
+
+
+"   origin + 5
+"   let s:dark = 0
+"   if &background ==# 'dark'
+"     let s:dark = 1
+"     let s:mono_1 = ['#B0B7C4', '145']
+"     let s:mono_2 = ['#878E9C', '102']
+"     let s:mono_3 = ['#616875', '59']
+"     let s:mono_4 = ['#505768', '59']
+
+"     let s:hue_1  = ['#5BBBC7', '73'] " cyan
+"     let s:hue_2  = ['#66B4F4', '75'] " blue
+"     let s:hue_3  = ['#CB7DE2', '176'] " purple
+"     let s:hue_4  = ['#9DC87E', '114'] " green
+
+"     let s:hue_5   = ['#E5717A', '168'] " red 1
+"     let s:hue_5_2 = ['#C3554B', '130'] " red 2
+
+"     let s:hue_6   = ['#D69F6B', '173'] " orange 1
+"     let s:hue_6_2 = ['#EAC580', '180'] " orange 2
+
+"     let s:syntax_bg     = ['#2D3139', '16']
+"     let s:syntax_gutter = ['#687288', '60']
+"     let s:syntax_cursor = ['#313741', '16']
+
+"     let s:syntax_accent = ['#5790FF', '69']
+
+"     let s:vertsplit    = ['#1D1F24', '233']
+"     let s:special_grey = ['#40454D', '16']
+"     let s:visual_grey  = ['#434957', '17']
+"     let s:pmenu        = ['#383D46', '16']
+"   else
+"     let s:mono_1 = ['#4E5058', '23']
+"     let s:mono_2 = ['#6E717C', '60']
+"     let s:mono_3 = ['#A5A6AC', '145']
+"     let s:mono_4 = ['#C7C7C8', '250']
+
+"     let s:hue_1  = ['#689C1', '31'] " cyan
+"     let s:hue_2  = ['#457DF7', '33'] " blue
+"     let s:hue_3  = ['#AB2BA9', '127'] " purple
+"     let s:hue_4  = ['#55A654', '71'] " green
+
+"     let s:hue_5   = ['#E95B4E', '166'] " red 1
+"     let s:hue_5_2 = ['#CF1748', '160'] " red 2
+
+"     let s:hue_6   = ['#9D6D06', '94'] " orange 1
+"     let s:hue_6_2 = ['#C68906', '136'] " orange 2
+
+"     let s:syntax_bg     = ['#FEFEFE', '255']
+"     let s:syntax_gutter = ['#A3A3A3', '247']
+"     let s:syntax_cursor = ['#F5F5F5', '254']
+
+"     let s:syntax_accent = ['#5774FF', '63']
+"     let s:syntax_accent_2 = ['#588C3', '31']
+
+"     let s:vertsplit    = ['#ECEEE6', '188']
+"     let s:special_grey = ['#D8D8D8', '251']
+"     let s:visual_grey  = ['#D5D5D5', '251']
+"     let s:pmenu        = ['#E4E4E4', '253']
+"   endif
+
+"   let s:syntax_fg = s:mono_1
+"   let s:syntax_fold_bg = s:mono_3
   
 
+"   origin 0
 "   let s:dark = 0
 "   if &background ==# 'dark'
 "     let s:dark = 1
