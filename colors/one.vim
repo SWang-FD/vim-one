@@ -289,67 +289,131 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
 
 
   " Color definition --------------------------------------------------------{{{
+
   let s:dark = 0
   if &background ==# 'dark'
     let s:dark = 1
-    let s:mono_1 = ['#abb2bf', '145']
-    let s:mono_2 = ['#828997', '102']
-    let s:mono_3 = ['#5c6370', '59']
-    let s:mono_4 = ['#4b5263', '59']
+    let s:mono_1 = ['#B0B7C4', '145']
+    let s:mono_2 = ['#878E9C', '102']
+    let s:mono_3 = ['#616875', '59']
+    let s:mono_4 = ['#505768', '59']
 
-    let s:hue_1  = ['#56b6c2', '73'] " cyan
-    let s:hue_2  = ['#61afef', '75'] " blue
-    let s:hue_3  = ['#c678dd', '176'] " purple
-    let s:hue_4  = ['#98c379', '114'] " green
+    let s:hue_1  = ['#5BBBC7', '73'] " cyan
+    let s:hue_2  = ['#66B4F4', '75'] " blue
+    let s:hue_3  = ['#CB7DE2', '176'] " purple
+    let s:hue_4  = ['#9DC87E', '114'] " green
 
-    let s:hue_5   = ['#e06c75', '168'] " red 1
-    let s:hue_5_2 = ['#be5046', '130'] " red 2
+    let s:hue_5   = ['#E5717A', '168'] " red 1
+    let s:hue_5_2 = ['#C3554B', '130'] " red 2
 
-    let s:hue_6   = ['#d19a66', '173'] " orange 1
-    let s:hue_6_2 = ['#e5c07b', '180'] " orange 2
+    let s:hue_6   = ['#D69F6B', '173'] " orange 1
+    let s:hue_6_2 = ['#EAC580', '180'] " orange 2
 
-    let s:syntax_bg     = ['#282c34', '16']
-    let s:syntax_gutter = ['#636d83', '60']
-    let s:syntax_cursor = ['#2c323c', '16']
+    let s:syntax_bg     = ['#2D3139', '16']
+    let s:syntax_gutter = ['#687288', '60']
+    let s:syntax_cursor = ['#313741', '16']
 
-    let s:syntax_accent = ['#528bff', '69']
+    let s:syntax_accent = ['#579104', '69']
 
-    let s:vertsplit    = ['#181a1f', '233']
-    let s:special_grey = ['#3b4048', '16']
-    let s:visual_grey  = ['#3e4452', '17']
-    let s:pmenu        = ['#333841', '16']
+    let s:vertsplit    = ['#1D1F24', '233']
+    let s:special_grey = ['#40454D', '16']
+    let s:visual_grey  = ['#434957', '17']
+    let s:pmenu        = ['#383D46', '16']
   else
-    let s:mono_1 = ['#494b53', '23']
-    let s:mono_2 = ['#696c77', '60']
-    let s:mono_3 = ['#a0a1a7', '145']
-    let s:mono_4 = ['#c2c2c3', '250']
+    let s:mono_1 = ['#4E5058', '23']
+    let s:mono_2 = ['#6E717C', '60']
+    let s:mono_3 = ['#A5A6AC', '145']
+    let s:mono_4 = ['#C7C7C8', '250']
 
-    let s:hue_1  = ['#0184bc', '31'] " cyan
-    let s:hue_2  = ['#4078f2', '33'] " blue
-    let s:hue_3  = ['#a626a4', '127'] " purple
-    let s:hue_4  = ['#50a14f', '71'] " green
+    let s:hue_1  = ['#689C1', '31'] " cyan
+    let s:hue_2  = ['#457DF7', '33'] " blue
+    let s:hue_3  = ['#AB2BA9', '127'] " purple
+    let s:hue_4  = ['#55A654', '71'] " green
 
-    let s:hue_5   = ['#e45649', '166'] " red 1
-    let s:hue_5_2 = ['#ca1243', '160'] " red 2
+    let s:hue_5   = ['#E95B4E', '166'] " red 1
+    let s:hue_5_2 = ['#CF1748', '160'] " red 2
 
-    let s:hue_6   = ['#986801', '94'] " orange 1
-    let s:hue_6_2 = ['#c18401', '136'] " orange 2
+    let s:hue_6   = ['#9D6D06', '94'] " orange 1
+    let s:hue_6_2 = ['#C68906', '136'] " orange 2
 
-    let s:syntax_bg     = ['#fafafa', '255']
-    let s:syntax_gutter = ['#9e9e9e', '247']
-    let s:syntax_cursor = ['#f0f0f0', '254']
+    let s:syntax_bg     = ['#FEFEFE', '255']
+    let s:syntax_gutter = ['#A3A3A3', '247']
+    let s:syntax_cursor = ['#F5F5F5', '254']
 
-    let s:syntax_accent = ['#526fff', '63']
-    let s:syntax_accent_2 = ['#0083be', '31']
+    let s:syntax_accent = ['#577504', '63']
+    let s:syntax_accent_2 = ['#588C3', '31']
 
-    let s:vertsplit    = ['#e7e9e1', '188']
-    let s:special_grey = ['#d3d3d3', '251']
-    let s:visual_grey  = ['#d0d0d0', '251']
-    let s:pmenu        = ['#dfdfdf', '253']
+    let s:vertsplit    = ['#ECEEE6', '188']
+    let s:special_grey = ['#D8D8D8', '251']
+    let s:visual_grey  = ['#D5D5D5', '251']
+    let s:pmenu        = ['#E4E4E4', '253']
   endif
 
   let s:syntax_fg = s:mono_1
   let s:syntax_fold_bg = s:mono_3
+  
+
+"   let s:dark = 0
+"   if &background ==# 'dark'
+"     let s:dark = 1
+"     let s:mono_1 = ['#abb2bf', '145']
+"     let s:mono_2 = ['#828997', '102']
+"     let s:mono_3 = ['#5c6370', '59']
+"     let s:mono_4 = ['#4b5263', '59']
+
+"     let s:hue_1  = ['#56b6c2', '73'] " cyan
+"     let s:hue_2  = ['#61afef', '75'] " blue
+"     let s:hue_3  = ['#c678dd', '176'] " purple
+"     let s:hue_4  = ['#98c379', '114'] " green
+
+"     let s:hue_5   = ['#e06c75', '168'] " red 1
+"     let s:hue_5_2 = ['#be5046', '130'] " red 2
+
+"     let s:hue_6   = ['#d19a66', '173'] " orange 1
+"     let s:hue_6_2 = ['#e5c07b', '180'] " orange 2
+
+"     let s:syntax_bg     = ['#282c34', '16']
+"     let s:syntax_gutter = ['#636d83', '60']
+"     let s:syntax_cursor = ['#2c323c', '16']
+
+"     let s:syntax_accent = ['#528bff', '69']
+
+"     let s:vertsplit    = ['#181a1f', '233']
+"     let s:special_grey = ['#3b4048', '16']
+"     let s:visual_grey  = ['#3e4452', '17']
+"     let s:pmenu        = ['#333841', '16']
+"   else
+"     let s:mono_1 = ['#494b53', '23']
+"    let s:mono_2 = ['#696c77', '60']
+"     let s:mono_3 = ['#a0a1a7', '145']
+"     let s:mono_4 = ['#c2c2c3', '250']
+
+"     let s:hue_1  = ['#0184bc', '31'] " cyan
+"     let s:hue_2  = ['#4078f2', '33'] " blue
+"     let s:hue_3  = ['#a626a4', '127'] " purple
+"     let s:hue_4  = ['#50a14f', '71'] " green
+
+"     let s:hue_5   = ['#e45649', '166'] " red 1
+"     let s:hue_5_2 = ['#ca1243', '160'] " red 2
+
+"     let s:hue_6   = ['#986801', '94'] " orange 1
+"     let s:hue_6_2 = ['#c18401', '136'] " orange 2
+
+"     let s:syntax_bg     = ['#fafafa', '255']
+"     let s:syntax_gutter = ['#9e9e9e', '247']
+"     let s:syntax_cursor = ['#f0f0f0', '254']
+
+"     let s:syntax_accent = ['#526fff', '63']
+"     let s:syntax_accent_2 = ['#0083be', '31']
+
+"     let s:vertsplit    = ['#e7e9e1', '188']
+"     let s:special_grey = ['#d3d3d3', '251']
+"     let s:visual_grey  = ['#d0d0d0', '251']
+"     let s:pmenu        = ['#dfdfdf', '253']
+"   endif
+
+"   let s:syntax_fg = s:mono_1
+"   let s:syntax_fold_bg = s:mono_3
 
   " }}}
 
