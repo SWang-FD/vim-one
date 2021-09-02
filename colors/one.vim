@@ -295,7 +295,7 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   if &background ==# 'dark'
     let s:dark = 1
 "    let s:mono_1 = ['#B5BCC9', '145']  " origin + 10
-    let s:mono_1 = ['#C5CCD9', '145']  " origin + 26
+    let s:mono_1 = ['#bbc2cf', '145']  " origin + 16
     let s:mono_2 = ['#8C93A1', '102']
     let s:mono_3 = ['#666D7A', '59']  " origin + 10
 "     let s:mono_3 = ['#5c6370', '59']  " origin
