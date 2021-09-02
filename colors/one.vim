@@ -301,10 +301,11 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
 "     let s:mono_3 = ['#5c6370', '59']  " origin
     let s:mono_4 = ['#555C6D', '59']
 
-    let s:hue_1  = ['#60C0CC', '73'] " cyan
-    let s:hue_2  = ['#6BB9F9', '75'] " blue
-    let s:hue_3  = ['#D082E7', '176'] " purple
-    let s:hue_4  = ['#A2CD83', '114'] " green
+    let s:hue_1    = ['#60C0CC', '73'] " cyan
+    let s:hue_2    = ['#6BB9F9', '75'] " blue
+    let s:hue_3    = ['#D082E7', '176'] " purple
+    let s:hue_3_2  = ['#ae81ff', '176'] " purple 2
+    let s:hue_4    = ['#A2CD83', '114'] " green
 
     let s:hue_5   = ['#EA767F', '168'] " red 1
     let s:hue_5_2 = ['#C85A50', '130'] " red 2
@@ -481,7 +482,7 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('Constant',       s:hue_4,         '',          '')
   call <sid>X('String',         s:hue_4,         '',          '')
   call <sid>X('Character',      s:hue_4,         '',          '')
-  call <sid>X('Number',         s:hue_6,         '',          '')
+  call <sid>X('Number',         s:hue_3_2,       '',          '')
   call <sid>X('Boolean',        s:hue_6,         '',          '')
   call <sid>X('Float',          s:hue_6,         '',          '')
   call <sid>X('Identifier',     s:hue_5,         '',          'none')
