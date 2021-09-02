@@ -315,7 +315,7 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
 "     let s:syntax_bg     = ['#32363E', '16']  " origin + 10
 "     let s:syntax_bg     = ['#282c34', '16']  " origin
 "     let s:syntax_bg     = ['#1E222A', '16']  " origin - 10
-    let s:syntax_bg     = ['#13171F', '16']  " origin - 21
+    let s:syntax_bg     = ['#181c24', '16']  " origin - 16
     let s:syntax_gutter = ['#6D778D', '60']
     let s:syntax_cursor = ['#363C46', '16']
 
@@ -426,7 +426,7 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
 
   " Vim editor color --------------------------------------------------------{{{
   call <sid>X('Normal',       s:syntax_fg,     s:syntax_bg,      '')
-  call <sid>X('bold',         '',              '',               'bold')
+  call <sid>X('bold',         s:hue_6,         s:syntax_bg,      'bold')
   call <sid>X('ColorColumn',  '',              s:syntax_cursor,  '')
   call <sid>X('Conceal',      s:mono_4,        s:syntax_bg,      '')
   call <sid>X('Cursor',       '',              s:syntax_accent,  '')
